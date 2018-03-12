@@ -68,12 +68,11 @@ class Student
       SELECT *
       FROM students
       WHERE grade = ?
-      LIMIT x
     SQL
     grade = "10"
-    DB[:conn].execute(sql,grade,x).map do |row|
+    DB[:conn].execute(sql,grade).map do |row|
       self.new_from_db(row)
-    end
+    end.first(x)
 
   end
 
