@@ -70,6 +70,10 @@ class Student
       WHERE grade = ?
       LIMIT x
     SQL
+    grade = "10"
+    DB[:conn].execute(sql,grade,limit).map do |row|
+      self.new_from_db(row)
+    end
 
   end
 
