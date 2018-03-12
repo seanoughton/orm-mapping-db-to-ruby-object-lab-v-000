@@ -64,7 +64,7 @@ class Student
   end
 
   def first_X_students_in_grade_10(x)
-    
+
   end
 
   def save
