@@ -64,6 +64,12 @@ class Student
   end
 
   def first_X_students_in_grade_10(x)
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE grade = ?
+      LIMIT x
+    SQL
 
   end
 
