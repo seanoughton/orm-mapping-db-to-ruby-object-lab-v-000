@@ -58,6 +58,7 @@ class Student
       WHERE grade < ?
       LIMIT 1
     SQL
+    grade = "12"
   end
 
   def save
