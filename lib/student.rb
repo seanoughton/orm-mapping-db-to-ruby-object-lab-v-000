@@ -37,6 +37,10 @@ class Student
     end.first
   end
 
+
+  def count_all_students
+  end
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
