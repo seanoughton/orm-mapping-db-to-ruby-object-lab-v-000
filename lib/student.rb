@@ -59,6 +59,9 @@ class Student
       LIMIT 1
     SQL
     grade = "12"
+    DB[:conn].execute(sql,grade).map do |row|
+      self.new_from_db(row)
+    end
   end
 
   def save
