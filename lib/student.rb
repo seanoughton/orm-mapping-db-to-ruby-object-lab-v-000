@@ -53,10 +53,10 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE grade < ?
+      WHERE grade < 12
     SQL
     grade = "12"
-    DB[:conn].execute(sql,grade).map do |row|
+    DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
   end
