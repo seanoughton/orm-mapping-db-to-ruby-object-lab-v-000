@@ -38,7 +38,7 @@ class Student
   end
 
 
-  def count_all_students
+  def self.count_all_students
   end
 
   def save
