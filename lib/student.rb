@@ -56,7 +56,6 @@ class Student
       SELECT *
       FROM students
       WHERE grade < ?
-      LIMIT 1
     SQL
     grade = "12"
     DB[:conn].execute(sql,grade).map do |row|
