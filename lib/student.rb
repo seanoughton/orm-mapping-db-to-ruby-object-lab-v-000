@@ -89,6 +89,7 @@ class Student
       SELECT *
       FROM students
       WHERE grade = ?
+      ORDER BY students.id
     SQL
     grade = "10"
     DB[:conn].execute(sql,grade).map do |row|
